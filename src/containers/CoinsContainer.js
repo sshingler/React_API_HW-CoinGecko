@@ -27,7 +27,7 @@ const CoinsContainer = () => {
                     </input>
                 </form>
             </div>
-            <CoinsList/>
+            <CoinsList allCoins={allCoins}/>
         </div>
   
     );
