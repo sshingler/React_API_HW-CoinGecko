@@ -8,10 +8,14 @@ const CoinsList = ({allCoins}) => {
     })
 
 
+
+
+
     return (
         <div className="CoinsList">
         <h2>I'm a CoinList</h2>
         {coinDetails}
+     
         </div>
     );
 

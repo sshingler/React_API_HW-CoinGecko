@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from "react"; 
+import CoinDetail from "../components/CoinDetail";
 import CoinsList from "../components/CoinsList";
 
 const CoinsContainer = () => {
     const [allCoins, setAllCoins] = useState ([]);
+    const [search, setSearch] = useState(""); 
 
 
     useEffect (() => {
@@ -15,6 +17,16 @@ const CoinsContainer = () => {
         .then(allCoins =>setAllCoins(allCoins))
     };
 
+    const handleChange = event => {
+        setSearch(event.target.value)
+    }
+
+    const filteredCoins = allCoins.filter(coin => 
+       coin.name.toLowerCase().includes(search.toLowerCase())
+       );
+
+
+
     return (
         <div className="CoinsContainer">       
             <h1>I'm a coin container</h1>
@@ -23,11 +35,18 @@ const CoinsContainer = () => {
                 <form>
                     <input className="SearchInput" 
                     type="text"
-                    placeholder="Search">
+                    placeholder="Search"
+                    onChange={handleChange}>
                     </input>
                 </form>
             </div>
-            <CoinsList allCoins={allCoins}/>
+            {filteredCoins.map((coin, index) => {
+                return (
+                    <CoinDetail key={index} coin={coin}></CoinDetail>
+                )
+            }
+                )}
+            <CoinsList allCoins={allCoins} handleChange={handleChange}/>
         </div>
   
     );
