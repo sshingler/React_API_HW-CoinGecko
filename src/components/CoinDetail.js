@@ -3,7 +3,7 @@ import React from "react";
 const CoinDetail = () => {
 
     return (
-        <h1>I'm a Coin!</h1>
+        <h2>I'm a Coin!</h2>
     );
 
 };

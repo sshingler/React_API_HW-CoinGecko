@@ -5,7 +5,7 @@ const CoinsList = () => {
 
     return (
         <div className="CoinsList">
-        <h1>I'm a CoinList</h1>
+        <h2>I'm a CoinList</h2>
         <CoinDetail/>
         </div>
     );
