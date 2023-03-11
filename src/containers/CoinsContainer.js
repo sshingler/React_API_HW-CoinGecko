@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import CoinDetail from "../components/CoinDetail";
 import CoinsList from "../components/CoinsList";
 
+
 const CoinsContainer = () => {
     const [allCoins, setAllCoins] = useState ([]);
     const [search, setSearch] = useState(""); 
@@ -40,12 +41,13 @@ const CoinsContainer = () => {
                     </input>
                 </form>
             </div>
+
             {filteredCoins.map((coin, index) => {
                 return (
                     <CoinDetail key={index} coin={coin}></CoinDetail>
                 )
             }
-                )}
+                )};
             <CoinsList allCoins={allCoins} handleChange={handleChange}/>
         </div>
   
