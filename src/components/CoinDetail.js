@@ -16,6 +16,12 @@ const CoinDetail = ({coin}) => {
                 <div className="Coin-Data">
                     <p className="Coin-Price">£{coin.current_price.toLocaleString()}</p>
                     <p className="Coin-Market-Cap">£{coin.market_cap.toLocaleString()}</p>
+                    {coin.price_change_percentage_24h < 0 ? (
+                        <p className="Coin-Change-Red">{coin.price_change_percentage_24h.toFixed(2)}%</p>
+                    ): (
+                        <p className="Coin-Change-Green">{coin.price_change_percentage_24h.toFixed(2)}%</p>
+
+                    )}
                 </div>
 
             </div>
