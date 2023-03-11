@@ -14,7 +14,7 @@ const CoinDetail = ({coin}) => {
                 </div>
 
                 <div className="Coin-Data">
-                    <p className="Coin-Price"> Current price: £{coin.current_price.toLocaleString()}</p>
+                    <p className="Coin-Price"> Price: £{coin.current_price.toLocaleString()}</p>
                     <p className="Coin-Market-Cap">Mkt cap: £{coin.market_cap.toLocaleString()}</p>
                     {coin.price_change_percentage_24h < 0 ? (
                         <p className="Coin-Change-Red">{coin.price_change_percentage_24h.toFixed(2)}%</p>

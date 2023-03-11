@@ -30,7 +30,7 @@ const CoinsContainer = () => {
     return (
         <div className="CoinsContainer">       
             <div className="CoinSearch">
-                <h2>Search a currency</h2>
+                <h2>Search for a currency:</h2>
                 <form>
                     <input className="SearchInput" 
                     type="text"
@@ -50,7 +50,7 @@ const CoinsContainer = () => {
             <br></br>
             <br></br>
             <br></br>
-            <CoinsList allCoins={allCoins} handleChange={handleChange}/>
+            {/* <CoinsList allCoins={allCoins} handleChange={handleChange}/> */}
         </div>
   
     );
